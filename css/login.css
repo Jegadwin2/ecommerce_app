@@ -1,0 +1,171 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: poppins;
+    text-decoration: none;
+    list-style: none;
+}
+
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(../images/image-5.jpg);
+    background-blend-mode: darken;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.wrapper label{
+    background-color: #161616;
+    cursor: pointer;
+    border-radius: 50px;
+    color: #fff;
+    font-size: 24px;
+    padding: 16px 48px;
+}
+
+#chkBox{
+    display: none;
+}
+
+.main_content{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.8s;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.box{
+    display: flex;
+    width: 60%;
+    height: 400px;
+    top: 0;
+    left: 90%;
+    transform: translate(500px, -150px) scale(0.1);
+    transition: all 2s;
+    background: #fff;
+}
+
+.bx1{
+    width: 50%;
+    background-color: rgb(53, 90, 138);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.bx2{
+    width: 50%;
+    padding-top: 30px;
+    padding-left: 30px;
+}
+
+.bx2 h3{
+    margin-bottom: 26px;
+}
+
+.login-form input.first{
+    width: 90%;
+    height: 50px;
+    padding: 10px;
+    margin-bottom: 25px;
+    border-radius: 50px;
+    outline: none;
+    border: 0.5px solid rgb(97, 87, 87);
+}
+
+.login-form#phone-login{
+    display: none;
+    margin-top: 60px;
+}
+
+.login-form#email-login{
+    display: block;
+}
+
+.login-form input[type="submit"] {
+    background: rgb(25, 68, 111);
+    font-size: 25px;
+    line-height: 20px;
+    margin-top: 30px;
+    margin-bottom: 5px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.login-form input#phoneNumber,
+.login-form input#phoneNumber::placeholder{
+    font-size: 15px;
+}
+
+.remember_me{
+    display: flex;
+    padding-left: 10px;
+}
+
+.remember_me #rem{
+    margin-left: 5px;
+    margin-top: 3px;
+    color: #262626;
+    font-size: 14px;
+}
+
+#email,
+#password{
+    font-size: 15px;
+}
+
+#check input{
+    height: 16px;
+    width: 16px;
+}
+
+.close-btn{
+    position: relative;
+    text-align: center;
+    color: #262626;
+    font-weight: bold;
+}
+
+.box-close{
+    position: absolute;
+    top: 30px;
+    right: 45px;
+}
+
+#chkBox:checked + .main_content{
+    visibility: visible;
+    opacity: 1;
+}
+
+#chkBox:checked + .main_content .box{
+    transform: translate(34%, 34%);
+}
+
+#login_phone_number_ques{
+    margin-left: 200px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+#login_email_ques{
+    margin-left: 250px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+#login_phone_number_ques:hover,
+#login_email_ques:hover{
+    font-size: 13px;
+    font-weight: 600;
+}
